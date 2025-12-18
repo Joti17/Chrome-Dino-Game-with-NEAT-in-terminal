@@ -1,5 +1,5 @@
-# Chrome-Dino-Game-with-NEAT-in-terminal
-An implementation of the chrome Dino game fully made in the terminal and python
+# Chrome-Dino-Game-with-NEAT
+An implementation of the chrome Dino game in pygame with AI
 
 
 # How to use
