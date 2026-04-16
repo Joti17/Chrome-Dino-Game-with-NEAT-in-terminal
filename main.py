@@ -237,7 +237,7 @@ def main(genomes:list[neat.genome], config:neat.config) ->None:
         ge.append(gnome)
         last_jump_level.append(None)
         repeat_count.append(0)
-    gs_timer: int = 0 #Timer for gamespeed
+    gs_timer: int = 0 # Timer for gamespeed
     game_speed: float = default_game_speed
     while running:
         counter += 1
@@ -290,7 +290,7 @@ def main(genomes:list[neat.genome], config:neat.config) ->None:
                 if o > p:
                     if player.jump(i):
                         # Keep the same exponential fitness bonus
-                        ge[x].fitness += (0.25 * (0.5 ** (i - 1))) * game_speed  # i=1 → 0.25, i=2 → 0.125, etc.
+                        ge[x].fitness += (0.25 * (0.5 ** (i - 1))) * game_speed
 
                         # --- NEW: repeated-jump detection and penalty
                         if last_jump_level[x] is not None and last_jump_level[x] == i:
@@ -401,8 +401,8 @@ def run_1_player(conf):
         pickle.dump(winner, f)
 
 if __name__ == '__main__':
-    #ans = int(input("1 for fresh start \n or 2 for letting an AI play for you."))
-    ans = 1
+    ans = int(input("1 for fresh start \n or 2 for letting an AI play for you."))
+    # ans = 1
     if ans == 1:
         local_dir = os.path.dirname(__file__)
         config_path = os.path.join(local_dir, 'config_feedforward')
